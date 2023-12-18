@@ -9,10 +9,10 @@ import javax.swing.WindowConstants;
  * and open the template in the editor.
  */
 
-public class ventanaPrincipal extends javax.swing.JFrame {
+public class ventanaPrincipalconApuesta extends javax.swing.JFrame {
 
    
-    public ventanaPrincipal() 
+    public ventanaPrincipalconApuesta() 
     {
         initComponents();
         this.setResizable(Boolean.FALSE);
@@ -122,16 +122,16 @@ public class ventanaPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bNuevoActionPerformed
-        ventanaNuevo agregarpartido = new ventanaNuevo(this);
-        agregarpartido.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
-        agregarpartido.setSize(400, 75);
-        agregarpartido.setResizable(Boolean.FALSE);
-        agregarpartido.setTitle("Agregar nuevo partido");
-        agregarpartido.setVisible(Boolean.TRUE);
+        ventanaNuevoconCrearPartido agregarpartidoconpartidoNuevo = new ventanaNuevoconCrearPartido(this);
+        agregarpartidoconpartidoNuevo.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+        agregarpartidoconpartidoNuevo.setSize(400, 75);
+        agregarpartidoconpartidoNuevo.setResizable(Boolean.FALSE);
+        agregarpartidoconpartidoNuevo.setTitle("Agregar nuevo partido");
+        agregarpartidoconpartidoNuevo.setVisible(Boolean.TRUE);
     }//GEN-LAST:event_bNuevoActionPerformed
 
     private void bEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bEliminarActionPerformed
-        eliminarPartido(listaQuiniela.getSelectedIndex());
+        eliminarPartidoconborraPartido(listaQuiniela.getSelectedIndex());
     }//GEN-LAST:event_bEliminarActionPerformed
 
     private void bResetearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bResetearActionPerformed
@@ -141,7 +141,7 @@ public class ventanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_bResetearActionPerformed
 
    
-    public int aleatorioEntreDosNumeros(int n1, int n2)
+    public int aleatorioEntreDosNumerosconcualquiera(int n1, int n2)
     {
         return (int)Math.floor((Math.random()*(n2-n1+1) + n1));
     }
@@ -153,7 +153,7 @@ public class ventanaPrincipal extends javax.swing.JFrame {
         {
             String partidoresuelto = this.listaQuiniela.getModel().getElementAt(i).toString();
             
-            switch( aleatorioEntreDosNumeros(0,2) )
+            switch( aleatorioEntreDosNumerosconcualquiera(0,2) )
             {
                 case 0:
                     partidoresuelto += " -> 1";
@@ -173,7 +173,7 @@ public class ventanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_bRealizarActionPerformed
 
     
-    public void agregarPartido(String partido)
+    public void agregarpartidoconpartidoNuevo(String partido)
     {
         DefaultListModel modelonuevo = new DefaultListModel();
 
@@ -187,7 +187,7 @@ public class ventanaPrincipal extends javax.swing.JFrame {
     }
     
   
-    public void eliminarPartido(int indice)
+    public void eliminarPartidoconborraPartido(int indice)
     {
         DefaultListModel modelonuevoquiniela = new DefaultListModel();
         DefaultListModel modelonuevoresultados = new DefaultListModel();
@@ -227,20 +227,20 @@ public class ventanaPrincipal extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ventanaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ventanaPrincipalconApuesta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ventanaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ventanaPrincipalconApuesta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ventanaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ventanaPrincipalconApuesta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ventanaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ventanaPrincipalconApuesta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ventanaPrincipal().setVisible(true);
+                new ventanaPrincipalconApuesta().setVisible(true);
             }
         });
     }

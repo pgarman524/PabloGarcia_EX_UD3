@@ -3,20 +3,20 @@ import java.awt.event.KeyEvent;
 
 
 
-public class ventanaNuevo extends javax.swing.JFrame
+public class ventanaNuevoconCrearPartido extends javax.swing.JFrame
 {
    
     
-    private ventanaPrincipal v;
+    private ventanaPrincipalconApuesta v;
     
    
-    public ventanaNuevo() 
+    public ventanaNuevoconCrearPartido() 
     {
         initComponents();
     }
 
    
-    public ventanaNuevo(ventanaPrincipal ventana) 
+    public ventanaNuevoconCrearPartido(ventanaPrincipalconApuesta ventana) 
     {
         initComponents();
         v = ventana;
@@ -30,7 +30,7 @@ public class ventanaNuevo extends javax.swing.JFrame
         pFuncionalidad = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         tPartido = new javax.swing.JTextField();
-        bAgregarPartido = new javax.swing.JButton();
+        agregarPartidoconañadePartido = new javax.swing.JButton();
         pInformacion = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
 
@@ -49,13 +49,13 @@ public class ventanaNuevo extends javax.swing.JFrame
         });
         pFuncionalidad.add(tPartido, java.awt.BorderLayout.CENTER);
 
-        bAgregarPartido.setText("Aceptar");
-        bAgregarPartido.addActionListener(new java.awt.event.ActionListener() {
+        agregarPartidoconañadePartido.setText("Aceptar");
+        agregarPartidoconañadePartido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bAgregarPartidoActionPerformed(evt);
+                agregarPartidoconañadePartidoActionPerformed(evt);
             }
         });
-        pFuncionalidad.add(bAgregarPartido, java.awt.BorderLayout.LINE_END);
+        pFuncionalidad.add(agregarPartidoconañadePartido, java.awt.BorderLayout.LINE_END);
 
         getContentPane().add(pFuncionalidad, java.awt.BorderLayout.NORTH);
 
@@ -70,21 +70,21 @@ public class ventanaNuevo extends javax.swing.JFrame
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    public void agregarPartido(String p)
+    public void agregarpartidoconpartidoNuevo(String p)
     {
-        v.agregarPartido(p);
+        v.agregarpartidoconpartidoNuevo(p);
         tPartido.setText("");
         tPartido.requestFocus();
     }
     
-    private void bAgregarPartidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAgregarPartidoActionPerformed
-        agregarPartido(tPartido.getText());
-    }//GEN-LAST:event_bAgregarPartidoActionPerformed
+    private void agregarPartidoconañadePartidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregarPartidoconañadePartidoActionPerformed
+        agregarpartidoconpartidoNuevo(tPartido.getText());
+    }//GEN-LAST:event_agregarPartidoconañadePartidoActionPerformed
 
     private void tPartidoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tPartidoKeyPressed
         if( evt.getKeyCode() == KeyEvent.VK_ENTER )
         {
-            agregarPartido(tPartido.getText());
+            agregarpartidoconpartidoNuevo(tPartido.getText());
         }
     }//GEN-LAST:event_tPartidoKeyPressed
 
@@ -103,26 +103,26 @@ public class ventanaNuevo extends javax.swing.JFrame
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ventanaNuevo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ventanaNuevoconCrearPartido.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ventanaNuevo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ventanaNuevoconCrearPartido.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ventanaNuevo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ventanaNuevoconCrearPartido.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ventanaNuevo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ventanaNuevoconCrearPartido.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ventanaNuevo().setVisible(true);
+                new ventanaNuevoconCrearPartido().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton bAgregarPartido;
+    private javax.swing.JButton agregarPartidoconañadePartido;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel pFuncionalidad;
