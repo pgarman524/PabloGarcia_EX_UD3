@@ -2,20 +2,25 @@
 import java.awt.event.KeyEvent;
 
 
-
+/**
+ * @author Pablo
+ */
 public class partidoNuevo extends javax.swing.JFrame
 {
    
     
     private Apuesta v;
-    
-   
+
+
     public partidoNuevo() 
     {
         initComponents();
     }
 
-   
+    /**
+     *
+     * @param ventana la ventana de apuestas
+     */
     public partidoNuevo(Apuesta ventana) 
     {
         initComponents();
@@ -30,7 +35,7 @@ public class partidoNuevo extends javax.swing.JFrame
         pFuncionalidad = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         tPartido = new javax.swing.JTextField();
-        añadePartido = new javax.swing.JButton();
+        anadePartido = new javax.swing.JButton();
         pInformacion = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
 
@@ -49,13 +54,13 @@ public class partidoNuevo extends javax.swing.JFrame
         });
         pFuncionalidad.add(tPartido, java.awt.BorderLayout.CENTER);
 
-        añadePartido.setText("Aceptar");
-        añadePartido.addActionListener(new java.awt.event.ActionListener() {
+        anadePartido.setText("Aceptar");
+        anadePartido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                añadePartidoActionPerformed(evt);
+                anadePartidoActionPerformed(evt);
             }
         });
-        pFuncionalidad.add(añadePartido, java.awt.BorderLayout.LINE_END);
+        pFuncionalidad.add(anadePartido, java.awt.BorderLayout.LINE_END);
 
         getContentPane().add(pFuncionalidad, java.awt.BorderLayout.NORTH);
 
@@ -70,17 +75,29 @@ public class partidoNuevo extends javax.swing.JFrame
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     *
+     * @param p es el string del nuevo partido
+     */
     public void partidoNuevo(String p)
     {
         v.partidoNuevo(p);
         tPartido.setText("");
         tPartido.requestFocus();
     }
-    
-    private void añadePartidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_añadePartidoActionPerformed
-        partidoNuevo(tPartido.getText());
-    }//GEN-LAST:event_añadePartidoActionPerformed
 
+    /**
+     *
+     * @param evt es un evento
+     */
+    private void anadePartidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_anadePartidoActionPerformed
+        partidoNuevo(tPartido.getText());
+    }//GEN-LAST:event_anadePartidoActionPerformed
+
+    /**
+     *
+     * @param evt es un evento
+     */
     private void tPartidoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tPartidoKeyPressed
         if( evt.getKeyCode() == KeyEvent.VK_ENTER )
         {
@@ -88,7 +105,10 @@ public class partidoNuevo extends javax.swing.JFrame
         }
     }//GEN-LAST:event_tPartidoKeyPressed
 
-    
+    /**
+     *
+     * @param args es un array de strings
+     */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -122,7 +142,7 @@ public class partidoNuevo extends javax.swing.JFrame
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton añadePartido;
+    private javax.swing.JButton anadePartido;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel pFuncionalidad;
